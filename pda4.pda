@@ -3,28 +3,20 @@ start: q0
 accepting: {q2}
 
 q0 (_, _ -> S$, q1)
-
 q1 (_, S -> XA, q1)
 q1 (_, S -> BY, q1)
 q1 (_, S -> ZaZbZ, q1)
-
 q1 (_, A -> aA, q1)
 q1 (_, A -> _, q1)
-
-
+q1 (_, B -> bB, q1)
+q1 (_, B -> _, q1)
 q1 (_, X -> b, q1)
 q1 (_, X -> aXb, q1)
-
-
 q1 (_, Y -> a, q1)
 q1 (_, Y -> aYb, q1)
-
-
 q1 (_, Z -> aZ, q1)
 q1 (_, Z -> bZ, q1)
 q1 (_, Z -> _, q1)
-
 q1 (a, a -> _, q1)
 q1 (b, b -> _, q1)
-
 q1 (_, $ -> _, q2)
