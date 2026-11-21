@@ -1,0 +1,30 @@
+alphabet: {a, b}
+start: q0
+accepting: {q2}
+
+q0 (_, _ -> S$, q1)
+
+q1 (_, S -> XA, q1)
+q1 (_, S -> BY, q1)
+q1 (_, S -> ZaZbZ, q1)
+
+q1 (_, A -> aA, q1)
+q1 (_, A -> "", q1)
+
+
+q1 (_, X -> b, q1)
+q1 (_, X -> aXb, q1)
+
+
+q1 (_, Y -> a, q1)
+q1 (_, Y -> aYb, q1)
+
+
+q1 (_, Z -> aZ, q1)
+q1 (_, Z -> bZ, q1)
+q1 (_, Z -> "", q1)
+
+q1 (a, a -> "", q1)
+q1 (b, b -> "", q1)
+
+q1 (_, $ -> "", q2)
